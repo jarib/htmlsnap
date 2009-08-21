@@ -30,12 +30,9 @@ void HtmlSnap::render()
     buffer.open(QBuffer::WriteOnly);
 
     if(!image.save(&buffer, "PNG"))
-    {
         std::cerr << "could not save data to buffer";
-        return;
-    }
-
-    std::cout << data.toBase64().data();
+    else
+        std::cout << data.toBase64().data();
 
     QTimer::singleShot(0, this, SIGNAL(finished()));
 }
