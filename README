@@ -1,0 +1,3 @@
+Send HTML on stdin, read a Base64-encoded PNG image from stdout.
+
+Depends on Qt 4.5.
